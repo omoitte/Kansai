@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>2027.02 오사카·간사이 가족여행</title>
+<meta name="description" content="2027년 2월 오사카·간사이 가족여행 가이드 — 공항 교통, 지역별 동선, 당일치기, 먹거리, 쇼핑 체크리스트">
+<meta name="theme-color" content="#2472a4">
+<style>
+    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    body {
+        margin: 0;
+        background: #f4f6f9;
+        color: #2c3e50;
+        font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+        font-size: 15px;
+        line-height: 1.62;
+        letter-spacing: -0.2px;
+        -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 720px; margin: 0 auto; padding-bottom: 40px; }
+
+    /* ===== 헤더 ===== */
+    .header { padding: 22px 16px 16px; text-align: center; }
+    .header h1 { margin: 0; font-size: 23px; line-height: 1.35; letter-spacing: -0.8px; }
+    .header p { margin: 7px 0 0; font-size: 13px; color: #8fa0ad; }
+    .ver {
+        display: inline-block; margin-top: 11px; padding: 5px 13px;
+        background: #2472a4; border-radius: 999px;
+        font-size: 12.5px; font-weight: 700; color: #fff;
+    }
+    .ver b { font-size: 14px; }
+    .ver span { font-weight: 400; opacity: .85; }
+
+    /* ===== 스티키 네비 ===== */
+    .nav {
+        position: sticky; top: 0; z-index: 20;
+        display: flex; flex-direction: column; gap: 6px;
+        padding: 9px 10px 10px;
+        background: rgba(244,246,249,0.94);
+        backdrop-filter: saturate(180%) blur(10px);
+        -webkit-backdrop-filter: saturate(180%) blur(10px);
+        border-bottom: 1px solid #e3e9ef;
+    }
+    .ver-top {
+        background: #2472a4; color: #fff; border-radius: 8px;
+        padding: 5px 10px; text-align: center;
+        font-size: 12px; font-weight: 700;
+    }
+    .ver-top span { font-weight: 400; opacity: .9; }
+    .nav-row { display: flex; gap: 6px; }
+    .nav a {
+        flex: 1 1 0; padding: 8px 2px; text-align: center;
+        background: #fff; border: 1px solid #dde5ec; border-radius: 9px;
+        color: #41698c; text-decoration: none;
+        font-size: 12.5px; font-weight: 700; white-space: nowrap;
+    }
+    .nav a:active { background: #eaf3fa; }
+    .nav-row.sec a { background: #eef3f7; border-color: #dbe5ed; color: #5b7a92; font-weight: 600; }
+
+    /* ===== 카드 ===== */
+    .card {
+        background: #fff; border-radius: 16px;
+        padding: 16px 14px 18px; margin: 0 10px 14px;
+        box-shadow: 0 1px 3px rgba(20,40,60,.07);
+    }
+    .card > h2 {
+        margin: 0 0 12px; font-size: 18px; letter-spacing: -0.5px;
+        padding-bottom: 10px; border-bottom: 2px solid #eef2f6;
+    }
+    .card > h2 .tag {
+        display: block; margin-top: 4px;
+        font-size: 12.5px; font-weight: 400; color: #9fb0bd; letter-spacing: 0;
+    }
+    h3.sub {
+        margin: 18px 0 8px; font-size: 15px; letter-spacing: -0.4px; color: #34546e;
+    }
+    h3.sub:first-of-type { margin-top: 4px; }
+
+    /* ===== 항목 ===== */
+    .item { display: flex; gap: 11px; padding: 11px 0; border-bottom: 1px solid #f1f5f8; }
+    .item:last-child { border-bottom: none; }
+    .item-time {
+        flex: 0 0 52px; font-size: 12.5px; font-weight: 700;
+        color: #2980b9; padding-top: 2px;
+    }
+    .item-body { flex: 1; min-width: 0; }
+    .item-name { font-weight: 700; font-size: 15px; letter-spacing: -0.3px; }
+    .item-memo { margin-top: 4px; font-size: 13.5px; color: #70818f; line-height: 1.68; }
+
+    /* ===== 추천 링크 ===== */
+    .picks { display: flex; flex-direction: column; gap: 8px; margin-top: 11px; }
+    .pick {
+        display: block; padding: 10px 12px;
+        background: #fafcfd; border: 1px solid #dde7ee; border-radius: 11px;
+        color: #2472a4 !important; text-decoration: none;
+        font-size: 14px; font-weight: 700; letter-spacing: -0.3px;
+    }
+    .pick:active { background: #eef5fa; }
+    .pick span {
+        display: block; margin-top: 4px;
+        font-size: 13px; font-weight: 400; color: #76868f; line-height: 1.68;
+    }
+    .pick em { font-style: normal; color: #c0562f; font-weight: 700; }
+
+    /* ===== 배지 ===== */
+    .badge {
+        display: inline-block; margin-left: 5px; padding: 3px 8px;
+        border-radius: 10px; background: #eef1f3; color: #8b9aa6;
+        font-size: 11.5px; font-weight: 700; vertical-align: 2px; white-space: nowrap;
+    }
+    .badge.shop { background: #e9f3fb; color: #2980b9; }
+    .badge.opt  { background: #f1ecfb; color: #7d5bbe; }
+    .badge.warn { background: #fdeeea; color: #c0562f; }
+    .badge.ok   { background: #e7f5ee; color: #157a52; }
+
+    /* ===== 알림 줄 ===== */
+    .note {
+        margin-top: 11px; padding: 11px 12px;
+        background: #f4f8fb; border: 1px solid #dceaf3; border-radius: 11px;
+        font-size: 13px; line-height: 1.72; color: #456;
+    }
+    .note.warn { background: #fdf6f3; border-color: #f0ddd5; color: #7d5341; }
+    .note.good { background: #f3faf6; border-color: #d4eadf; color: #35614f; }
+    .note + .note { margin-top: 8px; }
+
+    /* ===== 표 ===== */
+    .tbl-wrap { overflow-x: auto; margin-top: 11px; -webkit-overflow-scrolling: touch; }
+    table { border-collapse: collapse; width: 100%; min-width: 420px; font-size: 13px; }
+    th, td { padding: 8px 9px; border: 1px solid #e6ecf1; text-align: left; vertical-align: top; }
+    th { background: #f3f7fa; font-weight: 700; color: #45627a; white-space: nowrap; }
+    td b { color: #2c3e50; }
+
+    /* ===== 체크리스트 ===== */
+    .chk-bar {
+        display: flex; align-items: center; gap: 10px;
+        padding: 10px 12px; margin-bottom: 12px;
+        background: #f1f7fb; border: 1px solid #d9e7f2; border-radius: 11px;
+    }
+    .chk-bar .cnt { font-size: 14px; font-weight: 700; color: #2980b9; white-space: nowrap; }
+    .chk-bar .track { flex: 1; height: 7px; background: #dce9f3; border-radius: 4px; overflow: hidden; }
+    .chk-bar .fill { height: 100%; width: 0; background: #3498db; transition: width .25s; }
+    .chk-bar button {
+        padding: 5px 11px; background: #fff; border: 1px solid #cfdfea;
+        border-radius: 8px; color: #5b7a92; font-size: 12px; font-weight: 700;
+        font-family: inherit; cursor: pointer;
+    }
+    .grp { margin-top: 16px; }
+    .grp-head {
+        font-size: 14.5px; font-weight: 700; color: #34546e;
+        padding-bottom: 7px; border-bottom: 2px solid #eef2f6; margin-bottom: 4px;
+    }
+    .grp-note { margin-top: 8px; font-size: 12.5px; color: #8b9aa6; line-height: 1.7; }
+    .chk-row { display: flex; align-items: stretch; gap: 8px; border-bottom: 1px solid #f2f5f8; }
+    .chk-row:last-of-type { border-bottom: none; }
+    .chk-row > .chk { flex: 1 1 auto; min-width: 0; border-bottom: none; }
+    .chk { display: flex; align-items: flex-start; gap: 10px; padding: 10px 2px; cursor: pointer; }
+    .chk input { position: absolute; opacity: 0; width: 0; height: 0; }
+    .chk-box {
+        flex: 0 0 19px; width: 19px; height: 19px; margin-top: 2px;
+        border: 2px solid #cbd8e2; border-radius: 6px; background: #fff;
+        position: relative; transition: all .15s;
+    }
+    .chk input:checked + .chk-box { background: #3498db; border-color: #3498db; }
+    .chk input:checked + .chk-box::after {
+        content: ''; position: absolute; left: 4.5px; top: 1px;
+        width: 5px; height: 10px; border: solid #fff;
+        border-width: 0 2.5px 2.5px 0; transform: rotate(45deg);
+    }
+    .chk-txt { flex: 1; min-width: 0; font-size: 14px; line-height: 1.6; }
+    .chk input:checked ~ .chk-txt { color: #a9b7c3; text-decoration: line-through; }
+    .chk-txt em { font-style: normal; color: #c0562f; font-weight: 700; margin-left: 6px; }
+    .chk-txt small { display: block; margin-top: 2px; font-size: 12.5px; color: #a4b1bc; }
+    .chk-txt small.chk-jp {
+        color: #2472a4; font-size: 14.5px; font-weight: 700; margin-top: 4px; letter-spacing: -0.2px;
+    }
+    .chk-lnk {
+        flex: 0 0 auto; align-self: center;
+        display: inline-flex; align-items: center; justify-content: center;
+        min-width: 46px; min-height: 34px; padding: 0 10px;
+        background: #eef4f8; border: 1px solid #cfdfea; border-radius: 9px;
+        color: #2472a4 !important; text-decoration: none;
+        font-size: 12px; font-weight: 700; white-space: nowrap;
+    }
+
+    /* ===== 맨 위로 ===== */
+    #toTop {
+        position: fixed; right: 14px; bottom: 16px; z-index: 60;
+        width: 44px; height: 44px; border-radius: 50%;
+        background: #2472a4; color: #fff !important;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 20px; text-decoration: none;
+        box-shadow: 0 3px 10px rgba(20,40,60,.26);
+        opacity: 0; pointer-events: none; transition: opacity .2s;
+    }
+    #toTop.on { opacity: .92; pointer-events: auto; }
+
+    .footer {
+        padding: 22px 16px 10px; text-align: center;
+        font-size: 12.5px; color: #a9b7c3; line-height: 1.8;
+    }
+
+    @media (max-width: 360px) {
+        body { font-size: 14.5px; }
+        .nav a { font-size: 11.5px; padding: 7px 1px; }
+        .item-time { flex-basis: 46px; }
+    }
+    @media print {
+        .nav, .chk-bar, #toTop { display: none !important; }
+        body { background: #fff; }
+        .card { box-shadow: none; border: 1px solid #ddd; }
+    }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+    <div class="header">
+        <h1>2027.02<br>오사카 · 간사이 가족여행</h1>
+        <p>김포 출발 · 4인 · 설 연휴 피해서</p>
+        <div class="ver">현재 버전 <b>v2</b><span> · USJ · 덴덴타운 · 캐릭터</span></div>
+    </div>
+
+    <div class="nav">
+        <div class="ver-top">v2 <span>· USJ · 덴덴타운 · 먼작귀</span></div>
+        <div class="nav-row">
+            <a href="#plan">계획</a>
+            <a href="#air">공항</a>
+            <a href="#stay">숙소</a>
+            <a href="#areas">지역</a>
+        </div>
+        <div class="nav-row sec">
+            <a href="#usj">USJ</a>
+            <a href="#denden">덴덴</a>
+            <a href="#trips">근교</a>
+            <a href="#eats">먹거리</a>
+            <a href="#shopping">쇼핑</a>
+            <a href="#feb">2월</a>
+            <a href="#jp">일본어</a>
+            <a href="#ready">준비</a>
+        </div>
+    </div>
+
+    <!-- ========== 계획 ========== -->
+    <div class="card" id="plan">
+        <h2>📅 언제 갈까<span class="tag">2027년 2월 · 날짜 확정 전</span></h2>
+
+        <div class="note warn">
+            <b>⚠️ 설 연휴를 반드시 피하세요.</b><br>
+            <b>2027년 설날은 2월 7일(일)</b>이고, 연휴가 <b>2월 6일(토) ~ 9일(화, 대체공휴일)</b>로 나흘입니다.<br>
+            이 주에 가면 <b>항공료가 두 배 가까이 뛰고</b> 인천·김포 모두 붐빕니다. 일본 현지도 한국·중국 관광객이 몰립니다.
+        </div>
+
+        <div class="note good">
+            <b>✅ 추천 창 — 2월 10일(수) 이후, 특히 셋째 주부터</b><br>
+            설 연휴가 끝나 항공료가 내려가고, <b>매화가 피기 시작</b>해서 볼거리도 생깁니다.<br>
+            2월은 일본 여행 <b>최저 수요기</b>라 호텔도 가장 쌉니다.
+        </div>
+
+        <h3 class="sub">날씨 — 춥지만 맑습니다</h3>
+        <div class="tbl-wrap">
+            <table>
+                <tr><th>항목</th><th>오사카 2월</th><th>참고 · 도쿄 2월</th></tr>
+                <tr><td>평균 최고</td><td><b>약 9~10℃</b></td><td>약 10℃</td></tr>
+                <tr><td>평균 최저</td><td><b>약 2~3℃</b></td><td>약 2℃</td></tr>
+                <tr><td>강수</td><td>적음 · 맑은 날 많음</td><td>적음 · 더 건조</td></tr>
+                <tr><td>눈</td><td>드묾 (시내 기준)</td><td>드묾</td></tr>
+            </table>
+        </div>
+        <div class="note">
+            <b>영하로 내려가는 일은 드물지만 체감이 셉니다.</b> 바닷바람과 건물 사이 바람이 강합니다.<br>
+            <b>내복 · 장갑 · 핫팩 · 목도리</b>는 챙기세요. 대신 <b>실내는 어디나 난방이 과할 정도</b>라 겉옷을 벗기 쉬운 차림이 좋습니다.
+        </div>
+
+        <h3 class="sub">왜 오사카인가 — 도쿄와 다른 점</h3>
+        <div class="note good">
+            <b>1. 도시가 작고 평평합니다.</b> 난바 · 신사이바시 · 우메다가 지하철 몇 정거장입니다. 지난 도쿄 여행 내내 체력이 변수였는데, 그게 구조적으로 줄어듭니다.<br>
+            <b>2. 쇼핑이 한 거리에 압축돼 있습니다.</b> 신사이바시스지 상점가 하나에 유니클로 · 무인양품 · 로프트 · 돈키 · 드럭스토어가 다 붙어 있습니다.<br>
+            <b>3. 먹는 게 취향에 맞습니다.</b> 스시 · 우동 중심이고 <b>돈코츠 의존도가 낮습니다.</b> 쿠시카츠는 아예 본고장입니다.<br>
+            <b>4. 교토 · 고베 · 나라가 당일치기권</b>입니다. 2월 교토는 사람이 가장 적습니다.<br>
+            <b>5. 김포 출발</b> — 인천까지 가지 않아도 됩니다.
+        </div>
+        <div class="note warn">
+            <b>단점은 하나입니다 — 공항이 멉니다.</b><br>
+            간사이공항에서 난바까지 <b>약 35~45분</b>입니다. 지난번 하네다 → 하마마츠초 <b>모노레일 18분</b>과 비교하면 이게 오사카의 유일한 교통 약점입니다.
+        </div>
+
+        <h3 class="sub">정하고 나면 채울 것</h3>
+        <div class="item">
+            <div class="item-time">1</div>
+            <div class="item-body">
+                <div class="item-name">날짜 확정<span class="badge warn">먼저</span></div>
+                <div class="item-memo">2월 10일 이후로 3박 4일 또는 4박 5일 · <b>항공권은 11~12월에 잡는 게 가장 쌉니다</b></div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-time">2</div>
+            <div class="item-body">
+                <div class="item-name">숙소 예약</div>
+                <div class="item-memo">난바 또는 신사이바시 · 아래 <b>숙소</b> 탭 참고 · 지난번 신토미초처럼 <b>다 도보권인 자리</b>로</div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-time">3</div>
+            <div class="item-body">
+                <div class="item-name">일자별 동선 짜기</div>
+                <div class="item-memo">날짜가 나오면 이 페이지에 <b>1일차~N일차 카드</b>를 붙입니다 · 지난 도쿄 페이지와 같은 형식</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== 공항 ========== -->
+    <div class="card" id="air">
+        <h2>✈️ 김포 → 간사이, 그리고 시내로<span class="tag">KIX는 시내에서 멉니다 — 여기만 잘 고르면 됩니다</span></h2>
+
+        <h3 class="sub">항공편</h3>
+        <div class="note">
+            <b>김포(GMP) → 간사이(KIX) 직항, 비행 약 2시간.</b><br>
+            <b>대한항공 · 아시아나항공 · 제주항공</b>이 운항합니다(일본 LCC 취항 여부는 출처가 엇갈리니 예약 시 확인하세요).<br>
+            <b>⚠️ 아시아나는 대한항공과의 통합 일정에 따라 편명·운항이 바뀔 수 있습니다.</b> 예약 전 항공사 공식 시간표를 확인하세요.
+        </div>
+
+        <h3 class="sub">공항 → 시내 · 네 가지</h3>
+        <div class="tbl-wrap">
+            <table>
+                <tr><th>수단</th><th>도착</th><th>시간</th><th>요금(1인)</th><th>메모</th></tr>
+                <tr>
+                    <td><b>난카이 공항급행</b></td><td>난바</td><td>약 45분</td><td><b>약 970엔</b></td>
+                    <td><b>가성비 1순위</b> · 4인 약 3,900엔 · 일반 전철이라 짐 둘 곳이 적음</td>
+                </tr>
+                <tr>
+                    <td><b>난카이 라피트</b></td><td>난바</td><td>약 34~40분</td><td><b>약 1,560엔</b></td>
+                    <td><b>전좌석 지정 · 짐 선반 있음</b> · 생김새가 특이해 아이들이 좋아함 · 「간쿠 토쿠와리」 기준</td>
+                </tr>
+                <tr>
+                    <td><b>JR 하루카</b></td><td>신오사카 · 교토</td><td>약 50분~1시간 20분</td><td>구간별</td>
+                    <td><b>교토를 먼저 갈 때</b> 또는 우메다·신오사카 숙소일 때</td>
+                </tr>
+                <tr>
+                    <td><b>리무진버스</b></td><td>난바 · 우메다</td><td>약 50분~1시간</td><td>구간별</td>
+                    <td><b>환승이 없습니다</b> · 캐리어를 기사님이 트렁크에 실어줌 · 짐 많을 때 최적</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="note good">
+            <b>추천 — 갈 때는 라피트, 올 때는 공항급행이나 리무진.</b><br>
+            도착 직후는 짐이 많고 지쳐 있으니 <b>앉아서 가는 라피트</b>가 낫고, 돌아올 때는 짐을 다 싸둔 상태라 <b>리무진버스</b>가 편합니다.<br>
+            넷이면 라피트와 공항급행의 차이가 <b>약 2,400엔</b>입니다. 큰돈은 아니니 첫날은 편하게 가세요.
+        </div>
+        <div class="note warn">
+            <b>⚠️ 요금과 소요 시간은 출처마다 다릅니다.</b> 특히 난카이 공식 페이지에 오래된 요금이 남아 있는 경우가 있습니다.<br>
+            <b>출발 전에 난카이전철 공식 사이트에서 다시 확인하세요.</b> 지난 도쿄 여행 때 아식스 긴자 영업시간을 2차 자료에서 가져왔다가 틀렸던 적이 있습니다.
+        </div>
+
+        <div class="picks">
+            <a class="pick" href="https://www.nankai.co.jp/traffic/express/rapit.html" target="_blank" rel="noopener">🚄 난카이 라피트 공식<span>시각표 · 요금 · 좌석 종류 · 치켓리스 예약</span></a>
+            <a class="pick" href="https://www.google.com/maps/search/?api=1&query=%E9%96%A2%E8%A5%BF%E5%9B%BD%E9%9A%9B%E7%A9%BA%E6%B8%AF" target="_blank" rel="noopener" data-jp="関西国際空港">📍 간사이국제공항<span>지도 · 터미널 위치 확인</span></a>
+        </div>
+    </div>
+
+    <!-- ========== 숙소 ========== -->
+    <div class="card" id="stay">
+        <h2>🏨 어디에 묵을까<span class="tag">지난번 신토미초처럼 「다 도보권」인 자리를 찾습니다</span></h2>
+
+        <div class="picks">
+            <a class="pick" href="https://www.google.com/maps/search/?api=1&query=%E9%9B%A3%E6%B3%A2%E9%A7%85" target="_blank" rel="noopener" data-jp="難波駅"><b>① 난바 (なんば)</b> — 1순위<span><b>도톤보리 · 신사이바시 · 쿠로몬시장이 전부 도보권</b>입니다 · 난카이 난바역이라 <b>공항에서 환승 없이 도착</b><br>지하철 미도스지선 · 센니치마에선 · 요츠바시선이 모여 어디로든 갑니다<br>⚠️ <b>밤에 시끄러운 구역이 있습니다</b> — 도톤보리 바로 앞보다 한두 블록 안쪽이 낫습니다</span></a>
+            <a class="pick" href="https://www.google.com/maps/search/?api=1&query=%E5%BF%83%E6%96%8E%E6%A9%8B%E9%A7%85" target="_blank" rel="noopener" data-jp="心斎橋駅"><b>② 신사이바시 (心斎橋)</b> — 쇼핑 우선이면<span><b>신사이바시스지 상점가 한가운데</b>입니다 · 무인양품 · 유니클로 · 로프트 · 돈키가 한 거리에<br>난바까지 <b>도보 10분</b>이라 사실상 같은 생활권입니다 · 난바보다 조용한 편</span></a>
+            <a class="pick" href="https://www.google.com/maps/search/?api=1&query=%E6%A2%85%E7%94%B0%E9%A7%85" target="_blank" rel="noopener" data-jp="梅田駅"><b>③ 우메다 (梅田)</b> — 근교 당일치기가 많으면<span><b>오사카역 · 한큐 · 한신이 모인 교통 허브</b>입니다 · <b>교토 · 고베로 나가기 가장 좋습니다</b><br>한큐백화점 · 그랑프론트 · 우메다 스카이빌딩이 도보권<br>⚠️ <b>역 구조가 미로입니다</b> — 처음이면 길을 많이 헤맵니다. 아이들과 짐 있으면 난바가 낫습니다</span></a>
+            <a class="pick" href="https://www.google.com/maps/search/?api=1&query=%E5%A4%A9%E7%8E%8B%E5%AF%BA%E9%A7%85" target="_blank" rel="noopener" data-jp="天王寺駅"><b>④ 텐노지 (天王寺)</b> — 예산을 아낄 때<span>숙박비가 가장 쌉니다 · <b>신세카이(쿠시카츠) · 아베노 하루카스</b>가 도보권 · 나라로 나가기 좋음<br>⚠️ 구역에 따라 분위기 차이가 큽니다 — 후기를 꼼꼼히 보세요</span></a>
+        </div>
+
+        <div class="note good">
+            <b>제 추천은 난바 또는 신사이바시입니다.</b> 지난 도쿄 여행에서 숙소가 도보권 한가운데였던 게 제일 잘한 선택이었습니다 — 중간에 짐을 두고 나올 수 있었고, 저녁에 지쳐도 걸어서 돌아왔습니다. 오사카에서 그 역할을 하는 게 이 두 곳입니다.
+        </div>
+    </div>
+
+    <!-- ========== 지역 ========== -->
+    <div class="card" id="areas">
+        <h2>🗺 지역별 — 하루에 하나씩<span class="tag">무리하지 않는 단위로 끊었습니다</span></h2>
+
+        <h3 class="sub">난바 · 도톤보리 — 첫날 저녁</h3>
+        <div class="picks">
+            <a class="pick" href="https://www.google.com/maps/search/?api=1&query=%E9%81%93%E9%A0%93%E5%A0%80%20%E3%82%B0%E3%83%AA%E3%82%B3%E7%9C%8B%E6%9D%BF" target="_blank" rel="noopener" data-jp="道頓堀 グリコ看板">도톤보리 · 글리코 간판<span>오사카의 상징 · 강변 산책로에서 보는 게 사람이 덜 몰립니다 · <b>밤에 조명이 들어와야 제맛</b></span></a>
+            <a class="pick" href="https://www.google.com/maps/search/?api=1&query=%E6%B3%95%E5%96%84%E5%AF%BA%E6%A8%AA%E4%B8%81" target="_blank" rel="noopener" data-jp="法善寺横丁">호젠지 요코초 (法善寺横丁)<span>돌바닥 골목 · <b>이끼로 뒤덮인 미즈카케 부동명왕</b>에 물을 끼얹고 소원을 빕니다<br>도톤보리 바로 옆인데 <b>분위기가 완전히 다릅니다</b> — 조용하고 사진이 잘 나옵니다</span></a>
+            <a class="pick" href="https://www.google.com/maps/search/?api=1&query=%E9%BB%92%E9%96%80%E5%B8%82%E5%A0%B4" target="_blank" rel="noopener" data-jp="黒門市場">쿠로몬 시장 (黒門市場)<em>오전</em><span><b>「오사카의 부엌」</b> · 회 · 성게 · 참치 · 과일을 <b>서서 바로 먹습니다</b><br>⚠️ <b>오전 장사</b>입니다 — 오후엔 많이 닫습니다 · 관광지화돼서 값이 싸진 않습니다 · <b>현금 준비</b></span></a>
+        </div>
+
+        <h3 class="sub">신사이바시 — 쇼핑을 한 번에 끝내는 곳</h3>
+        <div class="note good">
+            <b>지난번 도쿄에서 무인양품을 네 군데 돌고도 못 구한 게 있었죠.</b> 여기는 <b>아케이드 상점가 한 줄</b>에 유니클로 · 무인양품 · 로프트 · 돈키호테 · 드럭스토어 · 스탠다드 프로덕츠가 다 있습니다. <b>비가 와도 젖지 않습니다.</b>
+        </div>
+        <div class="picks">
+            <a class="pick" href="https://www.google.com/maps/search/?api=1&query=%E5%BF%83%E6%96%8E%E6%A9%8B%E7%AD%8B%E5%95%86%E5%BA%97%E8%A1%97" target="_blank" rel="noopener" data-jp="心斎橋筋商店街">신사이바시스지 상점가<span>약 600m 아케이드 · <b>북쪽 끝이 신사이바시역, 남쪽 끝이 도톤보리</b>라 걸어서 이어집니다</span></a>
+            <a class="pick" href="https://www.google.com/maps/search/?api=1&query=%E3%82%A2%E3%83%A1%E3%83%AA%E3%82%AB%E6%9D%91%20%E5%A4%A7%E9%98%AA" target="_blank" rel="noopener" data-jp="アメリカ村 大阪">아메리카무라 (アメ村)<span>신사이바시 서쪽 · 빈티지 · 스트리트 브랜드 · 젊은 동네<br>⚠️ <b>지난번에 슈프림·스투시류는 취향이 아니라고 하셨으니 건너뛰셔도 됩니다</b></span></a>
+        </div>
+
+        <h3 class="sub">우메다 (기타) — 백화점과 전망</h3>
+        <div class="picks">
+            <a class="pick" href="https://www.google.com/maps/search/?api=1&query=%E6%A2%85%E7%94%B0%E3%82%B9%E3%82%AB%E3%82%A4%E3%83%93%E3%83%AB%E7%A9%BA%E4%B8%AD%E5%BA%AD%E5%9C%92%E5%B1%95%E6%9C%9B%E5%8F%B0" target="_blank" rel="noopener" data-jp="梅田スカイビル 空中庭園展望台">우메다 스카이빌딩 · 공중정원 전망대<em>유료</em><span>두 동을 꼭대기에서 연결한 특이한 구조 · <b>옥상이 뚫려 있어 바람을 맞으며 봅니다</b><br>⚠️ <b>2월엔 꽤 춥습니다</b> — 방한 단단히 하고 올라가세요 · 해질 무렵이 가장 좋습니다</span></a>
+            <a class="pick" href="https://www.google.com/maps/search/?api=1&query=%E9%98%AA%E6%80%A5%E7%99%BE%E8%B2%A8%E5%BA%97%20%E6%A2%85%E7%94%B0%E6%9C%AC%E5%BA%97" target="_blank" rel="noopener" data-jp="阪急百貨店 梅田本店">한큐백화점 우메다 본점<span><b>지하 식품관이 일본 최상급</b>입니다 · 어머니 선물용 화과자 · 센베<br><b>2월 초에는 초콜릿 행사</b>가 열립니다 (아래 「2월」 탭 참고)</span></a>
+            <a class="pick" href="https://www.google.com/maps/search/?api=1&query=%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E5%A4%A7%E9%98%AA" target="_blank" rel="noopener" data-jp="グランフロント大阪">그랑프론트 오사카<span>오사카역 바로 옆 복합시설 · <b>실내라 추운 날 피난처</b>로 좋습니다 · 식당가가 큽니다</span></a>
+        </div>
+
+        <h3 class="sub">신세카이 · 츠텐카쿠 — 쿠시카츠 본고장</h3>
+        <div class="picks">
+            <a class="pick" href="https://www.google.com/maps/search/?api=1&query=%E9%80%9A%E5%A4%A9%E9%96%A3" target="_blank" rel="noopener" data-jp="通天閣">츠텐카쿠 (通天閣)<span>1912년 초대 건립 · 지금 탑은 1956년 재건 · <b>쇼와 시대 분위기가 그대로</b> 남은 동네입니다<br><b>전망대보다 아래 골목이 더 재미있습니다</b> · 텐노지역에서 도보권</span></a>
+            <a class="pick" href="https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E4%B8%96%E7%95%8C%20%E4%B8%B2%E3%82%AB%E3%83%84" target="_blank" rel="noopener" data-jp="新世界 串カツ">신세카이 쿠시카츠 거리<em>본고장</em><span><b>지난 도쿄 여행 마지막 밤에 쿠시카츠로 마무리하셨죠 — 여기가 그 원조 동네입니다</b><br>🗣 <b>소스는 두 번 찍지 않습니다 (ソースの二度づけ禁止)</b> · 양배추로 소스를 떠서 뿌리면 됩니다</span></a>
+        </div>
+
+        <h3 class="sub">오사카성 · 베이에어리어</h3>
+        <div class="picks">
+            <a class="pick" href="https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E9%98%AA%E5%9F%8E%E6%A2%85%E6%9E%97" target="_blank" rel="noopener" data-jp="大阪城梅林">오사카성 공원 · 매림 (梅林)<em>2월 중순~</em><span><b>약 1,200그루 매화</b>가 2월 중순부터 3월 초에 핍니다 · <b>공원과 매림은 무료</b>(천수각 내부만 유료)<br><b>2월에 오사카 가는 가장 큰 이유 중 하나</b>입니다 · 성을 배경으로 한 매화 사진</span></a>
+            <a class="pick" href="https://www.google.com/maps/search/?api=1&query=%E6%B5%B7%E9%81%8A%E9%A4%A8%20%E5%A4%A7%E9%98%AA" target="_blank" rel="noopener" data-jp="海遊館 大阪">가이유칸 (海遊館)<em>유료</em><span>세계 최대급 수족관 · <b>고래상어</b>가 간판 · <b>실내라 추운 날에 강합니다</b><br>⚠️ 주말·연휴엔 티켓 줄이 깁니다 — <b>온라인 예매</b> 권장</span></a>
+        </div>
+    </div>
+
+    <!-- ========== USJ ========== -->
+    <div class="card" id="usj">
+        <h2>🎢 유니버설 스튜디오 재팬<span class="tag">하루를 통으로 쓰는 날 · 티켓은 미리 삽니다</span></h2>
+
+        <div class="note">
+            <b>유니버설시티역(JR 유메사키선)</b> 바로 앞입니다 · <b>오사카역 → 니시쿠조 환승 → 유니버설시티, 약 20분</b><br>
+            난바에서는 <b>지하철 추오선 → 벤텐초 → JR</b>로 약 30분. 숙소가 난바·신사이바시여도 갈 만합니다.
+        </div>
+
+        <div class="note warn">
+            <b>⚠️ 티켓은 반드시 공식 온라인에서 미리 사세요.</b> 당일 매표소 줄이 매우 깁니다.<br>
+            <b>⚠️ 「슈퍼 닌텐도 월드」는 입장에 정리권(에리어 입장 확약권)이나 익스프레스 패스가 필요할 수 있습니다.</b> 운영 방식이 자주 바뀌니 <b>가기 전 공식 앱·사이트에서 그날 방식을 확인</b>하세요. 모르고 가면 못 들어갑니다.<br>
+            <b>2월은 비수기지만 주말·휴일은 여전히 붐빕니다</b> — 가능하면 <b>평일</b>로 잡으세요.
+        </div>
+
+        <div class="picks">
+            <a class="pick" style="border-color:#cfe6d8 !important;color:#157a52 !important" href="https://www.google.com/maps/search/?api=1&query=%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%83%BB%E3%83%8B%E3%83%B3%E3%83%86%E3%83%B3%E3%83%89%E3%83%BC%E3%83%BB%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%20%E3%83%A6%E3%83%8B%E3%83%90%E3%83%BC%E3%82%B5%E3%83%AB%E3%83%BB%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%AA%E3%83%BB%E3%82%B8%E3%83%A3%E3%83%91%E3%83%B3" target="_blank" rel="noopener" data-jp="スーパー・ニンテンドー・ワールド ユニバーサル・スタジオ・ジャパン"><b>① 슈퍼 닌텐도 월드</b> <span class="badge warn">정리권 확인</span><span><b>마리오 세계를 실물로 지은 구역</b>입니다 · <b>파워업 밴드</b>를 사면 구역 곳곳의 블록을 때리고 미션을 하는 게임이 됩니다<br><b>마리오 카트 ~쿠파의 도전장~</b>이 간판 어트랙션 · <b>동키콩 구역</b>도 추가됐습니다<br>⚠️ <b>여기 하나 때문에 USJ를 가는 사람이 많습니다</b> — 입장 방식을 가장 먼저 확인하세요</span></a>
+            <a class="pick" style="border-color:#cfe6d8 !important;color:#157a52 !important" href="https://www.google.com/maps/search/?api=1&query=%E3%82%A6%E3%82%A3%E3%82%B6%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%BB%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%83%BB%E3%82%AA%E3%83%96%E3%83%BB%E3%83%8F%E3%83%AA%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%83%E3%82%BF%E3%83%BC%20%E3%83%A6%E3%83%8B%E3%83%90%E3%83%BC%E3%82%B5%E3%83%AB%E3%83%BB%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%AA%E3%83%BB%E3%82%B8%E3%83%A3%E3%83%91%E3%83%B3" target="_blank" rel="noopener" data-jp="ウィザーディング・ワールド・オブ・ハリー・ポッター ユニバーサル・スタジオ・ジャパン"><b>② 위저딩 월드 오브 해리포터</b> <span class="badge ok">지난번과 다릅니다</span><span><b>호그와트성·호그스미드 마을을 실물로 지은 구역</b>입니다 · <b>버터비어</b> · <b>올리밴더 지팡이 가게</b><br><b>⚠️ 도쿄에서 가신 스튜디오 투어와는 완전히 다릅니다.</b> 거기는 「세트·소품 전시」였고, 여기는 <b>놀이기구와 테마 거리</b>입니다 — 중복이 아닙니다<br><b>성 안을 걸어 들어가는 라이드(금지된 여행)</b>가 간판입니다</span></a>
+            <a class="pick" style="border-color:#cfe0ee !important;color:#2472a4 !important" href="https://www.google.com/maps/search/?api=1&query=%E3%83%9F%E3%83%8B%E3%82%AA%E3%83%B3%E3%83%BB%E3%83%91%E3%83%BC%E3%82%AF%20%E3%83%A6%E3%83%8B%E3%83%90%E3%83%BC%E3%82%B5%E3%83%AB%E3%83%BB%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%AA%E3%83%BB%E3%82%B8%E3%83%A3%E3%83%91%E3%83%B3" target="_blank" rel="noopener" data-jp="ミニオン・パーク ユニバーサル・スタジオ・ジャパン"><b>③ 미니언 파크 · 그 외</b><span><b>미니언 파크</b>(아이들용), <b>죠스</b>, <b>쥬라기 공원</b>, <b>할리우드 드림</b>(롤러코스터)<br><b>겨울 시즌 쇼·퍼레이드</b>가 따로 있습니다 — 2월 운영 일정은 공식에서 확인</span></a>
+            <a class="pick" style="border-color:#eccfc6 !important;color:#c0562f !important" href="https://www.google.com/maps/search/?api=1&query=%E3%83%A6%E3%83%8B%E3%83%90%E3%83%BC%E3%82%B5%E3%83%AB%E3%83%BB%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%AA%E3%83%BB%E3%82%B8%E3%83%A3%E3%83%91%E3%83%B3%20%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%97%E3%83%AC%E3%82%B9%E3%83%91%E3%82%B9" target="_blank" rel="noopener" data-jp="ユニバーサル・スタジオ・ジャパン エクスプレスパス"><b>④ 익스프레스 패스를 살지 말지</b><span><b>별도 유료</b>이고 꽤 비쌉니다(입장권과 별개) · 넷이면 금액이 크게 뜁니다<br><b>2월 평일이면 없이도 됩니다.</b> 주말이거나 닌텐도 월드를 확실히 보고 싶으면 그때만 고려하세요<br><b>종류가 여러 개(4·7 등)이고 포함 어트랙션이 다릅니다</b> — 닌텐도 월드 입장 확약이 포함되는지 꼭 확인</span></a>
+            <a class="pick" style="border-color:#f0c9a0;color:#b9540a !important" href="https://www.usj.co.jp/web/ko/kr" target="_blank" rel="noopener">🎫 USJ 한국어 공식 사이트<span>티켓 구매 · 운영 시간 · 휴장일 · 어트랙션 운휴 정보 · <b>2월 운영 시간은 날짜마다 다릅니다</b></span></a>
+        </div>
+
+        <div class="note good">
+            <b>하루를 통으로 쓰세요.</b> 반나절로는 줄 서다 끝납니다. 넷이 가면 <b>개장 시간에 맞춰 들어가 닌텐도 월드부터</b> 가는 게 정석입니다.<br>
+            <b>2월엔 춥고 바람이 셉니다</b>(바닷가입니다) — 핫팩·장갑 필수. 줄은 대부분 야외입니다.
+        </div>
+    </div>
+
+    <!-- ========== 덴덴타운 ========== -->
+    <div class="card" id="denden">
+        <h2>🔌 니혼바시 덴덴타운<span class="tag">오사카의 아키하바라 — 철도모형이 특히 셉니다</span></h2>
+
+        <div class="note">
+            <b>지하철 「닛폰바시(日本橋)」 또는 「에비스초(恵美須町)」역</b> · <b>난바에서 도보 10분</b>이라 숙소가 난바면 걸어갑니다.<br>
+            전자상가에서 시작해 지금은 <b>애니메이션·피규어·프라모델·철도모형</b> 거리입니다. 서쪽 골목이 <b>오타로드(オタロード)</b>입니다.
+        </div>
+
+        <h3 class="sub">철도모형 — 여기가 본진입니다</h3>
+        <div class="picks">
+            <a class="pick" style="border-color:#cfe6d8 !important;color:#157a52 !important" href="https://www.google.com/maps/search/?api=1&query=%E3%82%B8%E3%83%A7%E3%83%BC%E3%82%B7%E3%83%B3%20%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%82%AD%E3%83%83%E3%82%BA%E3%83%A9%E3%83%B3%E3%83%89%E6%9C%AC%E5%BA%97%20%E6%97%A5%E6%9C%AC%E6%A9%8B" target="_blank" rel="noopener" data-jp="ジョーシン スーパーキッズランド本店 日本橋"><b>① 조신 슈퍼키즈랜드 본점</b> <b style="color:#1f8a5f">신제품 최다</b><span><b>5층이 통째로 철도모형</b>입니다 · 이 거리에서 <b>신품·신제품 품목이 가장 많습니다</b><br><b>KATO · TOMIX · 그린맥스</b>가 다 있습니다 · 프라모델·RC·완구 층도 따로 있어 아이들과 보기 좋습니다<br><b>처음이면 여기부터</b> 가세요 — 한 건물에서 전체 그림이 잡힙니다</span></a>
+            <a class="pick" style="border-color:#cfe6d8 !important;color:#157a52 !important" href="https://www.google.com/maps/search/?api=1&query=%E3%83%9D%E3%83%9D%E3%83%B3%E3%83%87%E3%83%83%E3%82%BF%20%E5%A4%A7%E9%98%AA%E6%97%A5%E6%9C%AC%E6%A9%8B%E5%BA%97" target="_blank" rel="noopener" data-jp="ポポンデッタ 大阪日本橋店"><b>② 포폰뎃타 오사카니혼바시점</b> <b style="color:#1f8a5f">렌탈 레이아웃</b><span>나니와구 니혼바시 4-10-3 <b>가코산 빌딩 3F</b> · N게이지 · HO게이지 · B트레인 <b>신품과 중고</b><br><b>가게 안에 N게이지 렌탈 레이아웃</b>이 있습니다 — <b>직접 달려볼 수 있어서 아이들이 제일 좋아합니다</b><br><b>KATO 공식 취급점</b>입니다 · ⚠️ <b>3층이라 입구를 찾기 어렵습니다</b> — 건물 번호를 보고 올라가세요</span></a>
+            <a class="pick" style="border-color:#cfe0ee !important;color:#2472a4 !important" href="https://www.google.com/maps/search/?api=1&query=%E3%83%9B%E3%83%93%E3%83%BC%E3%83%A9%E3%83%B3%E3%83%89%E3%81%BD%E3%81%A1%20%E6%97%A5%E6%9C%AC%E6%A9%8B1%E5%8F%B7%E5%BA%97" target="_blank" rel="noopener" data-jp="ホビーランドぽち 日本橋1号店"><b>③ 호비랜드 포치 니혼바시 1호점</b><span><b>중고 철도모형</b> 중심입니다 · 단종된 차량이나 <b>옛 KATO·TOMIX 제품</b>을 찾을 때<br><b>가격대가 넓어서 「구경하는 재미」</b>가 있습니다</span></a>
+            <a class="pick" style="border-color:#cfe0ee !important;color:#2472a4 !important" href="https://www.google.com/maps/search/?api=1&query=%E3%83%9C%E3%83%BC%E3%82%AF%E3%82%B9%20%E5%A4%A7%E9%98%AA%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%AB%E3%83%BC%E3%83%A0%20%E6%97%A5%E6%9C%AC%E6%A9%8B" target="_blank" rel="noopener" data-jp="ボークス 大阪ショールーム 日本橋"><b>④ 보크스 오사카 쇼룸</b><span>니혼바시 4초메 · <b>프라모델·피규어·돌(구체관절인형)</b>까지 다루는 대형점<br>철도모형 전문은 아니지만 <b>건담·스케일 모델</b>을 같이 보실 거면 들를 만합니다</span></a>
+        </div>
+        <div class="note warn">
+            <b>⚠️ 철도모형 가게는 영업시간이 들쭉날쭉하고 이전·폐점이 잦습니다.</b> 제가 찾은 정보도 1년 전후 자료가 섞여 있습니다.<br>
+            <b>가는 날 아침에 지도에서 가게 이름을 검색해 「영업 중」인지 확인하고 출발하세요.</b>
+        </div>
+
+        <h3 class="sub">애니메이션 · 피규어</h3>
+        <div class="picks">
+            <a class="pick" style="border-color:#cfe0ee !important;color:#2472a4 !important" href="https://www.google.com/maps/search/?api=1&query=%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A4%E3%83%88%20%E5%A4%A7%E9%98%AA%E6%97%A5%E6%9C%AC%E6%A9%8B" target="_blank" rel="noopener" data-jp="アニメイト 大阪日本橋"><b>애니메이트 오사카니혼바시</b><span>애니메이션 굿즈·만화·캐릭터 상품의 기본 체인 · <b>일본 한정 굿즈</b>는 여기가 가장 안전합니다</span></a>
+            <a class="pick" style="border-color:#cfe0ee !important;color:#2472a4 !important" href="https://www.google.com/maps/search/?api=1&query=%E3%81%BE%E3%82%93%E3%81%A0%E3%82%89%E3%81%91%20%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%89%E3%82%AB%E3%82%AA%E3%82%B9%20%E5%A4%A7%E9%98%AA" target="_blank" rel="noopener" data-jp="まんだらけ グランドカオス 大阪"><b>만다라케 그랜드 카오스 (우메다)</b><span><b>중고 애니·피규어·빈티지 완구</b>의 대형점입니다 · 덴덴타운이 아니라 <b>우메다</b>에 있습니다<br><b>옛날 물건을 보는 재미</b>가 큽니다 — 쇼와 시대 완구, 절판 피규어</span></a>
+            <a class="pick" style="border-color:#cfe0ee !important;color:#2472a4 !important" href="https://www.google.com/maps/search/?api=1&query=%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%83%9D%E3%83%86%E3%83%88%20%E5%A4%A7%E9%98%AA%20%E6%97%A5%E6%9C%AC%E6%A9%8B" target="_blank" rel="noopener" data-jp="スーパーポテト 大阪 日本橋"><b>슈퍼 포테토 (레트로 게임)</b><span><b>패미컴·슈퍼패미컴 시절 게임기와 카트리지</b>를 파는 가게 · 구경만 해도 재미있습니다</span></a>
+        </div>
+    </div>
+
+    <!-- ========== 근교 ========== -->
+    <div class="card" id="trips">
+        <h2>🚃 당일치기 — 오사카의 진짜 장점<span class="tag">2월은 사람이 가장 적어서 오히려 최적기입니다</span></h2>
+
+        <div class="tbl-wrap">
+            <table>
+                <tr><th>도시</th><th>오사카에서</th><th>2월에 좋은 점</th></tr>
+                <tr><td><b>교토</b></td><td>JR 신쾌속 <b>약 30분</b> (오사카역 → 교토역)</td><td><b>관광객이 가장 적은 달</b> · 기요미즈데라 · 후시미이나리를 줄 없이 봅니다</td></tr>
+                <tr><td><b>고베</b></td><td>JR 신쾌속 <b>약 25분</b> (오사카역 → 산노미야)</td><td>기타노이진칸 · 하버랜드 야경 · <b>고베규</b> · 난킨마치</td></tr>
+                <tr><td><b>나라</b></td><td>긴테쓰 <b>약 40분</b> (난바 → 긴테쓰나라)</td><td>사슴 · 도다이지 대불 · <b>아이들이 제일 좋아하는 코스</b></td></tr>
+            </table>
+        </div>
+
+        <div class="picks">
+            <a class="pick" href="https://www.google.com/maps/search/?api=1&query=%E4%BC%8F%E8%A6%8B%E7%A8%B2%E8%8D%B7%E5%A4%A7%E7%A4%BE" target="_blank" rel="noopener" data-jp="伏見稲荷大社"><b>교토 · 후시미이나리 대사</b><span><b>천 개의 붉은 도리이</b> · <b>24시간 개방 · 무료</b>라 이른 아침에 가면 거의 비어 있습니다<br>JR 나라선 「이나리」역 바로 앞 · <b>2월 아침은 사람이 정말 없습니다</b></span></a>
+            <a class="pick" href="https://www.google.com/maps/search/?api=1&query=%E6%B8%85%E6%B0%B4%E5%AF%BA" target="_blank" rel="noopener" data-jp="清水寺"><b>교토 · 기요미즈데라</b><span>목조 무대 · 교토 시내 전망 · <b>가는 길의 산넨자카·니넨자카</b>가 사실 본편입니다<br>⚠️ 언덕길이 깁니다 — 체력 배분 주의</span></a>
+            <a class="pick" href="https://www.google.com/maps/search/?api=1&query=%E5%8C%97%E9%87%8E%E7%95%B0%E4%BA%BA%E9%A4%A8" target="_blank" rel="noopener" data-jp="北野異人館"><b>고베 · 기타노이진칸</b><span>개항기 서양식 저택 거리 · 언덕 위라 <b>항구 전망</b>이 좋습니다<br>내려와서 <b>난킨마치(차이나타운)</b>와 <b>하버랜드 야경</b>으로 이으면 하루가 됩니다</span></a>
+            <a class="pick" href="https://www.google.com/maps/search/?api=1&query=%E6%9D%B1%E5%A4%A7%E5%AF%BA%20%E5%A5%88%E8%89%AF" target="_blank" rel="noopener" data-jp="東大寺 奈良"><b>나라 · 도다이지 + 나라공원</b><span>세계 최대급 목조건축과 대불 · <b>공원에 사슴이 자유롭게 돌아다닙니다</b><br>🗣 사슴센베(鹿せんべい)는 <b>사면 바로 몰려옵니다</b> — 아이들은 재미있어하고 무서워하기도 합니다</span></a>
+        </div>
+
+        <div class="note warn">
+            <b>⚠️ 하루에 한 도시만.</b> 지난 도쿄 여행에서 하루에 여러 지역을 넣었다가 체력이 바닥난 날이 있었습니다.<br>
+            <b>교토는 특히 하루를 통으로 써야 합니다</b> — 반나절로는 이동만 하다 끝납니다.
+        </div>
+    </div>
+
+    <!-- ========== 먹거리 ========== -->
+    <div class="card" id="eats">
+        <h2>🍽 먹거리<span class="tag">스시 · 우동 우선 · 돈코츠 제외</span></h2>
+
+        <div class="note good">
+            <b>간사이는 취향에 잘 맞는 동네입니다.</b> 국물이 <b>다시(가쓰오·다시마) 중심</b>이라 돈코츠처럼 진한 돼지뼈 육수가 주류가 아닙니다. 우동도 간장이 옅은 <b>간사이식</b>이라 국물까지 먹게 됩니다.
+        </div>
+
+        <h3 class="sub">반드시 먹을 것</h3>
+        <div class="picks">
+            <a class="pick" href="https://www.google.com/maps/search/?api=1&query=%E4%B8%B2%E3%81%8B%E3%81%A4%20%E3%81%A0%E3%82%8B%E3%81%BE%20%E6%96%B0%E4%B8%96%E7%95%8C" target="_blank" rel="noopener" data-jp="串かつ だるま 新世界"><b>쿠시카츠 · 다루마 (だるま)</b> <span class="badge ok">본고장</span><span>신세카이의 대표 쿠시카츠 노포입니다 · <b>도쿄에서 드신 체인과는 결이 다릅니다</b><br>🗣 <b>소스 두 번 찍기 금지</b> · 양배추는 무료이고 <b>소스를 떠서 뿌리는 용도</b>입니다<br>난바 · 도톤보리에도 지점이 있어 숙소 근처에서 먹을 수 있습니다</span></a>
+            <a class="pick" href="https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E9%98%AA%20%E3%81%86%E3%81%A9%E3%82%93%20%E8%80%81%E8%88%97" target="_blank" rel="noopener" data-jp="大阪 うどん 老舗"><b>간사이식 우동</b> <span class="badge ok">취향</span><span><b>간장이 옅고 다시가 진한 국물</b>입니다 · 관동식보다 훨씬 맑습니다<br><b>키츠네우동(きつねうどん)이 오사카가 발상지</b>입니다 — 유부를 올린 그것<br>지도에서 <b>「うどん」</b>으로 검색하면 난바·우메다에 노포가 여럿 나옵니다</span></a>
+            <a class="pick" href="https://www.google.com/maps/search/?api=1&query=%E9%BB%92%E9%96%80%E5%B8%82%E5%A0%B4%20%E5%AF%BF%E5%8F%B8" target="_blank" rel="noopener" data-jp="黒門市場 寿司"><b>쿠로몬시장 스시 · 해산물</b><span>시장 안에서 <b>썰어주는 회를 그 자리에서</b> 먹습니다 · 성게 · 참치 · 가리비 구이<br>⚠️ <b>오전 장사</b>라 오후엔 닫는 집이 많습니다 · <b>현금</b> 준비</span></a>
+            <a class="pick" href="https://www.google.com/maps/search/?api=1&query=%E3%81%8A%E5%A5%BD%E3%81%BF%E7%84%BC%E3%81%8D%20%E9%81%93%E9%A0%93%E5%A0%80" target="_blank" rel="noopener" data-jp="お好み焼き 道頓堀"><b>오코노미야키 · 네기야키</b><span>오사카식은 <b>재료를 반죽에 섞어</b> 굽습니다(히로시마식과 다름)<br><b>네기야키</b>는 파를 잔뜩 넣은 버전으로 느끼함이 덜합니다 — 어른들이 더 좋아합니다</span></a>
+            <a class="pick" href="https://www.google.com/maps/search/?api=1&query=%E3%81%9F%E3%81%93%E7%84%BC%E3%81%8D%20%E9%81%93%E9%A0%93%E5%A0%80" target="_blank" rel="noopener" data-jp="たこ焼き 道頓堀"><b>타코야키</b> <span class="badge opt">간식</span><span>도톤보리에 유명 가게가 몰려 있습니다 · <b>속이 아주 뜨겁습니다</b> — 아이들은 한 김 식혀서<br><b>한 집에서 배를 채우지 말고 두세 집을 나눠 드세요</b> — 가게마다 맛이 꽤 다릅니다</span></a>
+        </div>
+
+        <h3 class="sub">선물 · 간식</h3>
+        <div class="picks">
+            <a class="pick" href="https://www.google.com/maps/search/?api=1&query=551%E8%93%AC%E8%8E%B1%20%E8%B1%9A%E3%81%BE%E3%82%93" target="_blank" rel="noopener" data-jp="551蓬莱 豚まん"><b>551 호라이 부타망 (豚まん)</b> <span class="badge ok">오사카 한정</span><span><b>간사이에서만 파는 고기만두</b>입니다 · 역·백화점 지하에 매장이 많습니다<br>⚠️ <b>냉장이라 당일~익일 소비</b>입니다 · 공항점에서 사서 바로 가져가는 게 안전합니다<br><b>기내 반입 시 냄새가 강합니다</b> — 위탁이나 공항에서 먹고 가는 쪽을 권합니다</span></a>
+            <a class="pick" href="https://www.google.com/maps/search/?api=1&query=%E3%82%8A%E3%81%8F%E3%82%8D%E3%83%BC%E3%81%8A%E3%81%98%E3%81%95%E3%82%93%E3%81%AE%E5%BA%97%20%E3%83%81%E3%83%BC%E3%82%BA%E3%82%B1%E3%83%BC%E3%82%AD" target="_blank" rel="noopener" data-jp="りくろーおじさんの店 チーズケーキ"><b>리쿠로 오지상 치즈케이크</b><span>갓 구운 수플레 치즈케이크 · <b>난바 본점에서 구워 나오는 걸 받으면 가장 좋습니다</b><br>값이 싸고(한 판 1,000엔 내외) 아이들이 잘 먹습니다 · <b>당일 소비</b></span></a>
+            <a class="pick" href="https://www.google.com/maps/search/?api=1&query=%E9%96%A2%E8%A5%BF%E7%A9%BA%E6%B8%AF%20%E5%85%8D%E7%A8%8E%E5%BA%97" target="_blank" rel="noopener" data-jp="関西空港 免税店"><b>간사이공항 면세점</b> <span class="badge warn">마지막</span><span><b>주류는 출국심사 뒤 면세점</b>에서 사야 기내 반입 봉인백이 나옵니다 — 지난번 구보타 만주와 같은 규칙<br><b>면세 봉인 봉투는 일본에서 개봉 금지</b>(과자·화장품 같은 소모품)</span></a>
+        </div>
+    </div>
+
+    <!-- ========== 쇼핑 ========== -->
+    <div class="card" id="shopping">
+        <h2>🛍 쇼핑 체크리스트<span class="tag">도쿄에서 못 구한 것부터 이월했습니다</span></h2>
+
+        <div class="chk-bar">
+            <span class="cnt" id="chkCount">0 / 0</span>
+            <span class="track"><span class="fill" id="chkFill"></span></span>
+            <button type="button" id="chkReset">초기화</button>
+        </div>
+
+        <div class="grp-note">
+            오른쪽 <b>「공홈」·「사진」</b> 버튼을 누르면 그 물건의 사진과 가격이 나옵니다.<br>
+            각 항목 아래 <b style="color:#2472a4">🗣 파란 줄이 일본어 상품명</b>입니다. <b>점원에게 그 줄을 그대로 보여주세요.</b>
+        </div>
+
+        <div class="grp">
+            <div class="grp-head">🔴 도쿄에서 못 구한 것 — 이번엔 꼭</div>
+            <div class="chk-row"><label class="chk"><input type="checkbox" data-id="c01"><span class="chk-box"></span><span class="chk-txt"><b>무인양품 · 너도밤나무 나무 빗</b><small>시부야 · 긴자 · 롯폰기 전부 재고 없었음 · <b>신사이바시 플래그십에서 재도전</b></small></span></label><a class="chk-lnk" href="https://www.muji.com/jp/ja/store/search/cmdty/%E3%83%96%E3%83%8A%E6%9D%90%E3%83%98%E3%82%A2%E3%83%96%E3%83%A9%E3%82%B7" target="_blank" rel="noopener" data-jp="ブナ材ヘアブラシ">공홈</a></div>
+            <div class="chk-row"><label class="chk"><input type="checkbox" data-id="c02"><span class="chk-box"></span><span class="chk-txt"><b>무인양품 · 휴대용 면도기 교체날 10개 묶음</b><small>같은 이유로 실패 · 재고가 지점마다 다름</small></span></label><a class="chk-lnk" href="https://www.muji.com/jp/ja/store/search/cmdty/%E6%90%BA%E5%B8%AF%E7%94%A8%E3%81%B2%E3%81%92%E3%81%9D%E3%82%8A%20%E6%9B%BF%E5%88%83" target="_blank" rel="noopener" data-jp="携帯用ひげそり 替刃">공홈</a></div>
+            <div class="chk-row"><label class="chk"><input type="checkbox" data-id="c03"><span class="chk-box"></span><span class="chk-txt"><b>몽벨 · 코인 월렛 / 코인 파스</b><em>1,300~1,400円</em><small>시부야 · 신주쿠 · 긴자 · 오카치마치 <b>네 곳 모두 재고 없음</b> · 간사이 매장에서 다시</small></span></label><a class="chk-lnk" href="https://www.google.com/maps/search/?api=1&query=%E3%83%A2%E3%83%B3%E3%83%99%E3%83%AB%20%E5%A4%A7%E9%98%AA" target="_blank" rel="noopener" data-jp="モンベル 大阪">매장</a></div>
+            <div class="chk-row"><label class="chk"><input type="checkbox" data-id="c04"><span class="chk-box"></span><span class="chk-txt">JR 철도 굿즈 (스이카 펭귄류)<small>⚠️ <b>스이카는 JR동일본</b>이라 간사이엔 없습니다 · 간사이는 <b>이코카(ICOCA)의 「카모노하시」</b> 캐릭터 굿즈</small></span></label><a class="chk-lnk" href="https://www.google.com/search?tbm=isch&amp;q=ICOCA%20%E3%82%AB%E3%83%A2%E3%83%8E%E3%83%8F%E3%82%B7%20%E3%82%B0%E3%83%83%E3%82%BA" target="_blank" rel="noopener" data-jp="ICOCA カモノハシ グッズ">사진</a></div>
+        </div>
+
+        <div class="grp">
+            <div class="grp-head">🟦 무인양품 · 스탠다드 프로덕츠</div>
+            <div class="chk-row"><label class="chk"><input type="checkbox" data-id="c05"><span class="chk-box"></span><span class="chk-txt">스테인리스 보온보냉 보틀 500mL<small>지난번에 보셨던 그 모델 · 색상 재고 확인</small></span></label><a class="chk-lnk" href="https://www.muji.com/jp/ja/store/search/cmdty/%E3%82%B9%E3%83%86%E3%83%B3%E3%83%AC%E3%82%B9%E4%BF%9D%E6%B8%A9%E4%BF%9D%E5%86%B7%E3%83%9E%E3%82%B0" target="_blank" rel="noopener" data-jp="ステンレス保温保冷マグ 500ml">공홈</a></div>
+            <div class="chk-row"><label class="chk"><input type="checkbox" data-id="c06"><span class="chk-box"></span><span class="chk-txt">알루미늄 접이식 우산 / 초경량 우산<small>2월 비는 적지만 가볍고 선물로도 좋음</small></span></label><a class="chk-lnk" href="https://www.muji.com/jp/ja/store/search/cmdty/%E6%8A%98%E3%82%8A%E3%81%9F%E3%81%9F%E3%81%BF%E5%82%98" target="_blank" rel="noopener" data-jp="折りたたみ傘">공홈</a></div>
+            <div class="chk-row"><label class="chk"><input type="checkbox" data-id="c07"><span class="chk-box"></span><span class="chk-txt">스탠다드 프로덕츠 · 원목 잡화 / 타월<small>다이소 상위 라인 · <b>300엔대</b> 중심 · 무인양품과 결이 비슷한데 더 쌉니다</small></span></label><a class="chk-lnk" href="https://standardproducts.jp/" target="_blank" rel="noopener" data-jp="スタンダードプロダクツ">공홈</a></div>
+            <div class="chk-row"><label class="chk"><input type="checkbox" data-id="c08"><span class="chk-box"></span><span class="chk-txt">로프트 / 도큐핸즈 문구<small>지난번 LAMY 콜라보처럼 <b>한정 문구</b>를 여기서 봅니다</small></span></label><a class="chk-lnk" href="https://www.google.com/maps/search/?api=1&query=%E3%83%AD%E3%83%95%E3%83%88%20%E5%BF%83%E6%96%8E%E6%A9%8B" target="_blank" rel="noopener" data-jp="ロフト 心斎橋">매장</a></div>
+        </div>
+
+        <div class="grp">
+            <div class="grp-head">🟨 드럭스토어 · 돈키호테</div>
+            <div class="chk-row"><label class="chk"><input type="checkbox" data-id="c09"><span class="chk-box"></span><span class="chk-txt">멜라노CC · fino · 오타이산<small>지난번에 사셨던 것들 · <b>5,000엔 이상 한 번에 계산해야 면세</b></small></span></label><a class="chk-lnk" href="https://www.google.com/search?tbm=isch&amp;q=%E3%83%A1%E3%83%A9%E3%83%8E%EF%BD%83%EF%BD%83%20%E3%83%95%E3%82%A3%E3%83%BC%E3%83%8E%20%E5%A4%AA%E7%94%B0%E8%83%83%E6%95%A3" target="_blank" rel="noopener" data-jp="メラノCC フィーノ 太田胃散">사진</a></div>
+            <div class="chk-row"><label class="chk"><input type="checkbox" data-id="c10"><span class="chk-box"></span><span class="chk-txt">킷캣 지역 한정<small>간사이 한정 맛이 따로 있습니다 · <b>도쿄바나나 킷캣은 간토 한정</b>이라 여기 없습니다</small></span></label><a class="chk-lnk" href="https://www.google.com/search?tbm=isch&amp;q=%E3%82%AD%E3%83%83%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%20%E9%96%A2%E8%A5%BF%E9%99%90%E5%AE%9A" target="_blank" rel="noopener" data-jp="キットカット 関西限定">사진</a></div>
+            <div class="chk-row"><label class="chk"><input type="checkbox" data-id="c11"><span class="chk-box"></span><span class="chk-txt">돈키호테 도톤보리점<small>24시간 · <b>관람차가 건물에 붙어 있습니다</b> · 못 산 선물 최종 정리</small></span></label><a class="chk-lnk" href="https://www.google.com/maps/search/?api=1&query=%E3%83%89%E3%83%B3%E3%83%BB%E3%82%AD%E3%83%9B%E3%83%BC%E3%83%86%20%E9%81%93%E9%A0%93%E5%A0%80" target="_blank" rel="noopener" data-jp="ドン・キホーテ 道頓堀">매장</a></div>
+        </div>
+
+        <div class="grp">
+            <div class="grp-head">🟩 오사카에서만 살 수 있는 것</div>
+            <div class="chk-row"><label class="chk"><input type="checkbox" data-id="c12"><span class="chk-box"></span><span class="chk-txt">551 호라이 부타망<small><b>간사이 한정</b> · 냉장 · 당일~익일 소비 · <b>공항점에서 마지막에</b></small></span></label><a class="chk-lnk" href="https://www.google.com/search?tbm=isch&amp;q=551%E8%93%AC%E8%8E%B1%20%E8%B1%9A%E3%81%BE%E3%82%93" target="_blank" rel="noopener" data-jp="551蓬莱 豚まん">사진</a></div>
+            <div class="chk-row"><label class="chk"><input type="checkbox" data-id="c13"><span class="chk-box"></span><span class="chk-txt">리쿠로 오지상 치즈케이크<small>난바 본점에서 <b>갓 구운 것</b> · 당일 소비</small></span></label><a class="chk-lnk" href="https://www.google.com/search?tbm=isch&amp;q=%E3%82%8A%E3%81%8F%E3%82%8D%E3%83%BC%E3%81%8A%E3%81%98%E3%81%95%E3%82%93%E3%81%AE%E5%BA%97%20%E3%83%81%E3%83%BC%E3%82%BA%E3%82%B1%E3%83%BC%E3%82%AD" target="_blank" rel="noopener" data-jp="りくろーおじさんの店 チーズケーキ">사진</a></div>
+            <div class="chk-row"><label class="chk"><input type="checkbox" data-id="c14"><span class="chk-box"></span><span class="chk-txt">한큐 우메다 데파치카 화과자 · 센베<small>어머니 선물 · <b>일본 최상급 식품관</b> · 면세 카운터 있음</small></span></label><a class="chk-lnk" href="https://www.google.com/maps/search/?api=1&query=%E9%98%AA%E6%80%A5%E7%99%BE%E8%B2%A8%E5%BA%97%20%E6%A2%85%E7%94%B0%E6%9C%AC%E5%BA%97%20%E9%A3%9F%E5%93%81%E5%A3%B2%E5%A0%B4" target="_blank" rel="noopener" data-jp="阪急百貨店 梅田本店 食品売場">매장</a></div>
+        </div>
+
+        <div class="grp">
+            <div class="grp-head">🟪 덴덴타운 · 철도모형 · 프라모델</div>
+            <div class="chk-row"><label class="chk"><input type="checkbox" data-id="d01"><span class="chk-box"></span><span class="chk-txt"><b>KATO N게이지 차량</b><small>조신 슈퍼키즈랜드 <b>5층</b>이 신제품 최다 · 포폰뎃타는 <b>중고도</b> 있음 · <b>간사이 사철(한큐·난카이·긴테쓰) 차량은 간사이에서 사는 게 재고가 많습니다</b></small></span></label><a class="chk-lnk" href="https://www.google.com/maps/search/?api=1&query=%E3%82%B8%E3%83%A7%E3%83%BC%E3%82%B7%E3%83%B3%20%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%82%AD%E3%83%83%E3%82%BA%E3%83%A9%E3%83%B3%E3%83%89%E6%9C%AC%E5%BA%97%20%E6%97%A5%E6%9C%AC%E6%A9%8B" target="_blank" rel="noopener" data-jp="KATO Nゲージ 鉄道模型">매장</a></div>
+            <div class="chk-row"><label class="chk"><input type="checkbox" data-id="d02"><span class="chk-box"></span><span class="chk-txt"><b>TOMIX / 그린맥스 차량·선로</b><small>같은 건물에서 비교 구매 · <b>선로·전원(파워팩)은 규격이 섞이니 쓰시던 것과 맞추세요</b></small></span></label><a class="chk-lnk" href="https://www.google.com/search?tbm=isch&amp;q=TOMIX%20N%E3%82%B2%E3%83%BC%E3%82%B8" target="_blank" rel="noopener" data-jp="TOMIX グリーンマックス">사진</a></div>
+            <div class="chk-row"><label class="chk"><input type="checkbox" data-id="d03"><span class="chk-box"></span><span class="chk-txt"><b>포폰뎃타 렌탈 레이아웃 체험</b><small>가게 안에서 <b>직접 달려봅니다</b> · 사기 전에 굴려보기 좋음 · 니혼바시 4-10-3 <b>3층</b></small></span></label><a class="chk-lnk" href="https://www.google.com/maps/search/?api=1&query=%E3%83%9D%E3%83%9D%E3%83%B3%E3%83%87%E3%83%83%E3%82%BF%20%E5%A4%A7%E9%98%AA%E6%97%A5%E6%9C%AC%E6%A9%8B%E5%BA%97" target="_blank" rel="noopener" data-jp="ポポンデッタ 大阪日本橋店 レンタルレイアウト">매장</a></div>
+            <div class="chk-row"><label class="chk"><input type="checkbox" data-id="d04"><span class="chk-box"></span><span class="chk-txt">중고 철도모형 (단종·구형)<small>호비랜드 포치 니혼바시 1호점 · <b>옛 KATO·TOMIX</b>를 찾을 때</small></span></label><a class="chk-lnk" href="https://www.google.com/maps/search/?api=1&query=%E3%83%9B%E3%83%93%E3%83%BC%E3%83%A9%E3%83%B3%E3%83%89%E3%81%BD%E3%81%A1%20%E6%97%A5%E6%9C%AC%E6%A9%8B1%E5%8F%B7%E5%BA%97" target="_blank" rel="noopener" data-jp="ホビーランドぽち 日本橋">매장</a></div>
+            <div class="chk-row"><label class="chk"><input type="checkbox" data-id="d05"><span class="chk-box"></span><span class="chk-txt">건담 / 스케일 프라모델<small>보크스 오사카 쇼룸 · 조신 프라모델 층 · <b>한국보다 싸고 한정판이 많습니다</b></small></span></label><a class="chk-lnk" href="https://www.google.com/maps/search/?api=1&query=%E3%83%9C%E3%83%BC%E3%82%AF%E3%82%B9%20%E5%A4%A7%E9%98%AA%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%AB%E3%83%BC%E3%83%A0%20%E6%97%A5%E6%9C%AC%E6%A9%8B" target="_blank" rel="noopener" data-jp="ガンプラ ボークス 大阪">매장</a></div>
+        </div>
+        <div class="grp">
+            <div class="grp-head">🚃 철도 굿즈 — 간사이판</div>
+            <div class="chk-row"><label class="chk"><input type="checkbox" data-id="r01"><span class="chk-box"></span><span class="chk-txt"><b>ICOCA 「카모노하시」 굿즈</b><small>JR서일본 마스코트 · <b>스이카 펭귄의 간사이 버전</b>이라 보시면 됩니다 · 오사카역·신오사카역 기념품점</small></span></label><a class="chk-lnk" href="https://www.google.com/search?tbm=isch&amp;q=ICOCA%20%E3%82%AB%E3%83%A2%E3%83%8E%E3%83%8F%E3%82%B7%20%E3%82%B0%E3%83%83%E3%82%BA" target="_blank" rel="noopener" data-jp="ICOCA カモノハシ グッズ">사진</a></div>
+            <div class="chk-row"><label class="chk"><input type="checkbox" data-id="r02"><span class="chk-box"></span><span class="chk-txt">JR서일본 역 기념품점<small>오사카역·신오사카역 안 매장 · <b>신칸센 굿즈·차량 미니어처·클리어파일</b></small></span></label><a class="chk-lnk" href="https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E9%98%AA%E9%A7%85%20%E3%81%8A%E3%81%BF%E3%82%84%E3%81%92" target="_blank" rel="noopener" data-jp="JR西日本 おみやげ 大阪駅">매장</a></div>
+            <div class="chk-row"><label class="chk"><input type="checkbox" data-id="r03"><span class="chk-box"></span><span class="chk-txt">사철 굿즈 (한큐·난카이·긴테쓰)<small><b>간사이에서만 파는 것</b>입니다 · <b>난카이 라피트</b> 굿즈가 인기 · 한큐는 우메다역 구내 매장</small></span></label><a class="chk-lnk" href="https://www.google.com/search?tbm=isch&amp;q=%E5%8D%97%E6%B5%B7%E3%83%A9%E3%83%94%E3%83%BC%E3%83%88%20%E3%82%B0%E3%83%83%E3%82%BA" target="_blank" rel="noopener" data-jp="阪急 南海 近鉄 鉄道グッズ">사진</a></div>
+            <div class="chk-row"><label class="chk"><input type="checkbox" data-id="r04"><span class="chk-box"></span><span class="chk-txt">교토철도박물관 <small>교토 가는 날 선택 · <b>실물 증기기관차·신칸센 0계</b> 전시 · 뮤지엄숍 굿즈가 좋습니다</small></span></label><a class="chk-lnk" href="https://www.google.com/maps/search/?api=1&query=%E4%BA%AC%E9%83%BD%E9%89%84%E9%81%93%E5%8D%9A%E7%89%A9%E9%A4%A8" target="_blank" rel="noopener" data-jp="京都鉄道博物館">지도</a></div>
+        </div>
+        <div class="grp">
+            <div class="grp-head">🧸 캐릭터 · 일본 한정 — 먼작귀(치이카와) 중심</div>
+            <div class="grp-note" style="margin:6px 0 2px">
+                <b>먼작귀 상설 매장 셋이 전부 우메다에 모여 있습니다.</b> 한 번 나가면 다 돕니다.
+            </div>
+            <div class="chk-row"><label class="chk"><input type="checkbox" data-id="k01"><span class="chk-box"></span><span class="chk-txt"><b>ちいかわらんど 오사카우메다점</b><small><b>한큐 산반가이 南館 B1F · 10:00~21:00</b> · 한큐 오사카우메다역 직결<br>⚠️ 상설점이지만 <b>영업 여부는 공식 사이트에서 한 번 확인</b>하세요</small></span></label><a class="chk-lnk" href="https://www.google.com/maps/search/?api=1&query=%E3%81%A1%E3%81%84%E3%81%8B%E3%82%8F%E3%82%89%E3%82%93%E3%81%A9%20%E5%A4%A7%E9%98%AA%E6%A2%85%E7%94%B0%E5%BA%97%20%E9%98%AA%E6%80%A5%E4%B8%89%E7%95%AA%E8%A1%97" target="_blank" rel="noopener" data-jp="ちいかわらんど 大阪梅田店 阪急三番街">매장</a></div>
+            <div class="chk-row"><label class="chk"><input type="checkbox" data-id="k02"><span class="chk-box"></span><span class="chk-txt"><b>ちいかわベーカリー OSAKA</b> <span class="badge ok">오사카 한정</span><small><b>KITTE 오사카 3F</b>(우메다) · 2026년 6월 개업한 빵집 콘셉트점<br><b>오사카 한정 「치이카와 타코센 버거」</b>가 여기서만 나옵니다 · 얼굴 모양 빵</small></span></label><a class="chk-lnk" href="https://www.google.com/maps/search/?api=1&query=%E3%81%A1%E3%81%84%E3%81%8B%E3%82%8F%E3%83%99%E3%83%BC%E3%82%AB%E3%83%AA%E3%83%BC%20OSAKA%20KITTE%E5%A4%A7%E9%98%AA" target="_blank" rel="noopener" data-jp="ちいかわベーカリー OSAKA KITTE大阪">매장</a></div>
+            <div class="chk-row"><label class="chk"><input type="checkbox" data-id="k03"><span class="chk-box"></span><span class="chk-txt"><b>ちいかわパークストア</b> <span class="badge ok">신규</span><small><b>LUCUA SOUTH 11F</b>(오사카역 직결) · <b>2026년 11월 24일 개업</b> 예정이라 <b>2027년 2월엔 열려 있습니다</b><br>이케부쿠로 「치이카와 파크」 굿즈를 간사이에서 파는 곳</small></span></label><a class="chk-lnk" href="https://www.google.com/maps/search/?api=1&query=%E3%83%AB%E3%82%AF%E3%82%A2%E5%A4%A7%E9%98%AA%20LUCUA" target="_blank" rel="noopener" data-jp="ちいかわパークストア ルクア大阪">매장</a></div>
+            <div class="chk-row"><label class="chk"><input type="checkbox" data-id="k04"><span class="chk-box"></span><span class="chk-txt">포켓몬 센터 오사카<small>우메다 권역 · <b>일본 한정 인형·카드</b> · 조카 선물용<br>⚠️ 위치가 바뀐 적이 있으니 <b>지도로 현재 점포를 확인</b>하세요</small></span></label><a class="chk-lnk" href="https://www.google.com/maps/search/?api=1&query=%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E3%82%AA%E3%83%BC%E3%82%B5%E3%82%AB" target="_blank" rel="noopener" data-jp="ポケモンセンターオーサカ">매장</a></div>
+            <div class="chk-row"><label class="chk"><input type="checkbox" data-id="k05"><span class="chk-box"></span><span class="chk-txt">지브리 「동구리 공화국」<small>토토로·마녀배달부 키키 굿즈 · 우메다·난바 상업시설 안에 입점</small></span></label><a class="chk-lnk" href="https://www.google.com/maps/search/?api=1&query=%E3%81%A9%E3%82%93%E3%81%90%E3%82%8A%E5%85%B1%E5%92%8C%E5%9B%BD%20%E5%A4%A7%E9%98%AA" target="_blank" rel="noopener" data-jp="どんぐり共和国 大阪">매장</a></div>
+            <div class="chk-row"><label class="chk"><input type="checkbox" data-id="k06"><span class="chk-box"></span><span class="chk-txt">산리오 기프트 게이트<small>헬로키티·시나모롤·쿠로미 · <b>일본 한정 디자인</b>이 많습니다</small></span></label><a class="chk-lnk" href="https://www.google.com/maps/search/?api=1&query=%E3%82%B5%E3%83%B3%E3%83%AA%E3%82%AA%E3%82%AE%E3%83%95%E3%83%88%E3%82%B2%E3%83%BC%E3%83%88%20%E5%A4%A7%E9%98%AA" target="_blank" rel="noopener" data-jp="サンリオギフトゲート 大阪">매장</a></div>
+            <div class="chk-row"><label class="chk"><input type="checkbox" data-id="k07"><span class="chk-box"></span><span class="chk-txt">스누피타운 / 리락쿠마 스토어<small>우메다·난바 상업시설 · <b>일본 한정 생활잡화</b>가 선물로 좋습니다</small></span></label><a class="chk-lnk" href="https://www.google.com/maps/search/?api=1&query=%E3%82%B9%E3%83%8C%E3%83%BC%E3%83%94%E3%83%BC%E3%82%BF%E3%82%A6%E3%83%B3%20%E5%A4%A7%E9%98%AA" target="_blank" rel="noopener" data-jp="スヌーピータウン リラックマストア 大阪">매장</a></div>
+        </div>
+        <div class="grp">
+            <div class="grp-head">🎢 USJ 한정 굿즈</div>
+            <div class="chk-row"><label class="chk"><input type="checkbox" data-id="u01"><span class="chk-box"></span><span class="chk-txt"><b>파워업 밴드 (마리오)</b><small>슈퍼 닌텐도 월드에서 <b>블록을 때리고 미션을 하려면 필요</b>합니다 · 캐릭터별로 다름<br><b>굿즈이자 입장 후 놀이 도구</b>라 사실상 필수에 가깝습니다</small></span></label><a class="chk-lnk" href="https://www.google.com/search?tbm=isch&amp;q=%E3%83%91%E3%83%AF%E3%83%BC%E3%82%A2%E3%83%83%E3%83%97%E3%83%90%E3%83%B3%E3%83%89%20USJ" target="_blank" rel="noopener" data-jp="パワーアップバンド スーパーニンテンドーワールド">사진</a></div>
+            <div class="chk-row"><label class="chk"><input type="checkbox" data-id="u02"><span class="chk-box"></span><span class="chk-txt"><b>올리밴더 지팡이 (해리포터)</b><small>호그스미드 마을의 지팡이 가게 · <b>인터랙티브 지팡이</b>를 사면 구역 곳곳에서 마법을 쓸 수 있습니다<br>⚠️ 일반 지팡이와 인터랙티브 지팡이는 <b>값과 기능이 다릅니다</b></small></span></label><a class="chk-lnk" href="https://www.google.com/search?tbm=isch&amp;q=%E3%83%8F%E3%83%AA%E3%83%BC%E3%83%9D%E3%83%83%E3%82%BF%E3%83%BC%20%E6%9D%96%20USJ" target="_blank" rel="noopener" data-jp="オリバンダーの店 杖 USJ">사진</a></div>
+            <div class="chk-row"><label class="chk"><input type="checkbox" data-id="u03"><span class="chk-box"></span><span class="chk-txt">버터비어 · 기념 머그<small>해리포터 구역 한정 음료 · <b>무알코올</b>이라 아이들도 마십니다 · 컵을 기념품으로 가져갈 수 있는 옵션</small></span></label><a class="chk-lnk" href="https://www.google.com/search?tbm=isch&amp;q=%E3%83%90%E3%82%BF%E3%83%BC%E3%83%93%E3%83%BC%E3%83%AB%20USJ" target="_blank" rel="noopener" data-jp="バタービール USJ">사진</a></div>
+            <div class="chk-row"><label class="chk"><input type="checkbox" data-id="u04"><span class="chk-box"></span><span class="chk-txt">미니언 / 스누피 굿즈<small>USJ 한정 디자인 · <b>파크 밖 「유니버설 시티워크」</b>에도 매장이 있어 입장권 없이 살 수 있습니다</small></span></label><a class="chk-lnk" href="https://www.google.com/maps/search/?api=1&query=%E3%83%A6%E3%83%8B%E3%83%90%E3%83%BC%E3%82%B5%E3%83%AB%E3%83%BB%E3%82%B7%E3%83%86%E3%82%A3%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%AF%E5%A4%A7%E9%98%AA" target="_blank" rel="noopener" data-jp="ユニバーサル・シティウォーク大阪">매장</a></div>
+        </div>
+        <div class="note warn">
+            <b>지난 여행에서 배운 규칙 두 개를 그대로 가져왔습니다.</b><br>
+            <b>① 재고 없는 물건은 네 군데를 돌지 않습니다.</b> 두 곳에서 없으면 한국 온라인으로 넘기세요. 몽벨 지갑에 하루를 썼습니다.<br>
+            <b>② 하루에 쇼핑 포인트는 세 개까지.</b> 그 이상은 체력이 안 버팁니다.<br><b>③ 덴덴타운과 우메다 캐릭터 매장은 같은 날에 넣지 마세요.</b> 덴덴타운은 난바 쪽(남), 치이카와·포켓몬은 우메다(북)라 도시를 가로지릅니다. <b>덴덴타운은 난바 일정에, 캐릭터는 우메다 일정에</b> 붙이세요.<br><b>④ USJ 가는 날은 쇼핑을 비우세요.</b> 하루를 통으로 씁니다.
+        </div>
+    </div>
+
+    <!-- ========== 2월 ========== -->
+    <div class="card" id="feb">
+        <h2>🌸 2월에만 있는 것<span class="tag">비수기라고 볼 게 없는 건 아닙니다</span></h2>
+
+        <div class="picks">
+            <a class="pick" href="https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E9%98%AA%E5%9F%8E%E6%A2%85%E6%9E%97" target="_blank" rel="noopener" data-jp="大阪城梅林"><b>① 오사카성 매림 (梅林)</b> <span class="badge ok">2월 중순~3월 초</span><span><b>약 1,200그루</b>의 매화가 성곽을 배경으로 핍니다 · <b>공원과 매림은 무료</b><br><b>벚꽃보다 한 달 이르고 사람이 훨씬 적습니다</b> — 2월에 가는 보상이 바로 이것입니다<br>⚠️ 개화는 그해 날씨에 따라 1~2주 움직입니다 — <b>가기 전 개화 상황 확인</b></span></a>
+            <a class="pick" href="https://www.google.com/maps/search/?api=1&query=%E9%98%AA%E6%80%A5%E7%99%BE%E8%B2%A8%E5%BA%97%20%E6%A2%85%E7%94%B0%E6%9C%AC%E5%BA%97" target="_blank" rel="noopener" data-jp="阪急百貨店 梅田本店"><b>② 백화점 초콜릿 행사</b> <span class="badge ok">2월 초</span><span>밸런타인 앞 2주간 <b>일본 전국·해외 쇼콜라티에</b>가 백화점 지하에 모입니다<br><b>한큐 우메다가 일본 최대급</b>입니다 · 데파치카 좋아하시니 이건 일정에 넣을 만합니다<br>⚠️ <b>설 연휴와 겹치는 시기</b>라 사람이 매우 많습니다 · 평일 오전이 낫습니다</span></a>
+            <a class="pick" href="https://www.google.com/maps/search/?api=1&query=%E5%8C%97%E9%87%8E%E5%A4%A9%E6%BA%80%E5%AE%AE%20%E6%A2%85" target="_blank" rel="noopener" data-jp="北野天満宮 梅"><b>③ 교토 · 기타노텐만구 매화</b> <span class="badge opt">교토 가는 날</span><span>학문의 신을 모신 신사 · <b>약 1,500그루 매화</b>로 유명합니다<br><b>2월 하순에 매화 관련 행사</b>가 열립니다 — 날짜는 그해 공지를 확인하세요</span></a>
+            <a class="pick" href="https://www.google.com/maps/search/?api=1&query=%E9%80%9A%E5%A4%A9%E9%96%A3%20%E5%A4%9C%E6%99%AF" target="_blank" rel="noopener" data-jp="通天閣 夜景"><b>④ 겨울 야경 · 일루미네이션</b><span><b>2월은 해가 짧아 17시 반이면 어둡습니다</b> — 야경 보기엔 오히려 좋습니다<br>미도스지 가로수 일루미네이션 · 우메다 스카이빌딩 · 고베 하버랜드<br>⚠️ <b>일루미네이션은 대개 연말~1월에 끝납니다</b> — 2월에도 하는지 확인 필요</span></a>
+        </div>
+
+        <div class="note warn">
+            <b>⚠️ 2월에 주의할 것</b><br>
+            <b>설 연휴 (2/6 토 ~ 2/9 화)</b> — 항공료·숙박비 급등, 인파<br>
+            <b>해가 짧습니다</b> — 17:30이면 어둡습니다. 야외 일정은 오전~오후 초반에 몰아야 합니다<br>
+            <b>일부 시설이 겨울 단축 운영</b>을 합니다 — 정원·전망대는 특히 폐장이 이릅니다. <b>지난번 구 시바리큐 정원을 시간 넘겨 못 들어간 적이 있습니다</b>
+        </div>
+    </div>
+
+    <!-- ========== 일본어 ========== -->
+    <div class="card" id="jp">
+        <h2>🗣 쓸 일본어<span class="tag">화면을 그대로 보여주셔도 됩니다</span></h2>
+
+        <div class="tbl-wrap">
+            <table>
+                <tr><th>상황</th><th>일본어</th><th>읽기</th></tr>
+                <tr><td>이거 있나요?</td><td><b>これ、ありますか</b></td><td>코레, 아리마스카</td></tr>
+                <tr><td>몇 층인가요?</td><td><b>何階ですか</b></td><td>난가이데스카</td></tr>
+                <tr><td>재고 있나요?</td><td><b>在庫はありますか</b></td><td>자이코와 아리마스카</td></tr>
+                <tr><td>면세 되나요?</td><td><b>免税できますか</b></td><td>멘제이 데키마스카</td></tr>
+                <tr><td>사진 메뉴 있나요?</td><td><b>写真のメニューありますか</b></td><td>샤신노 메뉴 아리마스카</td></tr>
+                <tr><td>카드 되나요?</td><td><b>カード使えますか</b></td><td>카-도 츠카에마스카</td></tr>
+                <tr><td>4명입니다</td><td><b>4人です</b></td><td>요닌데스</td></tr>
+                <tr><td>포장해 주세요</td><td><b>持ち帰りでお願いします</b></td><td>모치카에리데 오네가이시마스</td></tr>
+                <tr><td>리무진 승차장 어디예요?</td><td><b>リムジンバスのりばはどこですか</b></td><td>리무진바스 노리바와 도코데스카</td></tr>
+            </table>
+        </div>
+
+        <div class="note">
+            <b>간사이에서만 통하는 것</b><br>
+            <b>おおきに</b>(오오키니) — 간사이 사투리로 「고맙습니다」. 시장·노포에서 쓰면 반응이 좋습니다.<br>
+            <b>ソースの二度づけ禁止</b>(소-스노 니도즈케 킨시) — 쿠시카츠집의 그 규칙. 벽에 붙어 있습니다.
+        </div>
+    </div>
+
+    <!-- ========== 준비 ========== -->
+    <div class="card" id="ready">
+        <h2>🎒 준비물 · 현장 규칙<span class="tag">지난 여행에서 실제로 걸렸던 것만</span></h2>
+
+        <h3 class="sub">현금</h3>
+        <div class="note warn">
+            <b>간사이는 도쿄보다 현금 쓸 일이 더 많습니다.</b> 쿠로몬시장 · 신세카이 쿠시카츠 노포 · 작은 상점은 <b>현금만</b> 받는 곳이 흔합니다.<br>
+            <b>세븐일레븐 세븐은행 ATM</b> — 24시간, 해외 카드 가능, <b>한국어 화면</b> 선택 가능, 수수료 220엔 전후.<br>
+            <b>⚠️ 카드 결제 시 「원화(KRW)」를 절대 고르지 마세요.</b> 3~8% 마크업이 붙습니다. <b>무조건 엔화(JPY)</b>.
+        </div>
+
+        <h3 class="sub">교통카드</h3>
+        <div class="note">
+            <b>ICOCA(이코카)</b>가 간사이 카드입니다. <b>지난번에 쓰시던 스이카·파스모도 간사이에서 그대로 됩니다</b>(상호 이용) — 잔액이 남아 있으면 새로 살 필요 없습니다.<br>
+            <b>애플페이·구글페이에 스이카를 넣어두셨다면</b> 그대로 쓰시면 됩니다. 충전도 폰에서 됩니다.
+        </div>
+
+        <h3 class="sub">짐</h3>
+        <div class="note">
+            <b>항공사 위탁 수하물은 보통 1인 1개 23kg</b>입니다. 4인이면 4개까지 무료 — <b>빈 가방도 개수에 들어갑니다.</b><br>
+            <b>위탁에 넣을 것</b> — 주류 · 액체 · 칼류 · 손톱깎이<br>
+            <b>기내에 들고 탈 것</b> — 여권 · 보조배터리 · 면세 봉인 봉투<br>
+            <b>⚠️ 면세 봉인 봉투는 일본에서 개봉 금지</b>(과자·화장품 같은 소모품). 캐리어 같은 일반물품은 써도 됩니다.
+        </div>
+
+        <h3 class="sub">세관</h3>
+        <div class="note warn">
+            <b>한국 입국 면세 한도는 미화 800달러</b>입니다. 넘으면 <b>자진신고</b>하세요.<br>
+            <b>자진신고 시 관세 30% 감면</b>(최대 20만원), <b>미신고 적발은 40~60% 가산세</b>입니다.<br>
+            <b>카드로 산 것은 세관에 기록이 통보됩니다</b> — 미신고는 잘 걸립니다.<br>
+            <b>주류는 2L · 400달러 이내</b>, <b>담배는 200개비</b>까지 별도 면세입니다.
+        </div>
+
+        <h3 class="sub">이 페이지를 쓰는 방법</h3>
+        <div class="note good">
+            <b>영업시간은 전부 현장에서 다시 확인하세요.</b> 이 페이지의 시간·요금은 일반적으로 알려진 내용이라 실제와 다를 수 있습니다.<br>
+            일본 노포는 <b>부정기 휴무 · 재료 소진 마감 · 브레이크 타임(14~17시)</b>으로 예고 없이 닫습니다.<br>
+            <b>가는 날 아침에 구글맵에서 가게 이름을 검색해 「영업 중」인지 보고 출발하세요.</b>
+        </div>
+    </div>
+
+    <div class="footer">
+        2027.02 · 오사카 · 간사이<br>가족여행 가이드
+        <br><span style="color:#c3ccd4;font-size:11.5px">v2 · USJ · 덴덴타운 철도모형 · 캐릭터 한정 (날짜 확정 전)</span>
+    </div>
+</div>
+
+<a href="#" id="toTop" aria-label="맨 위로">↑</a>
+
+<script>
+(function () {
+    var KEY = 'osaka2027.shopping';
+
+    // 일본어 상품명을 화면에 노출 + 버튼 라벨 정리
+    var rows = document.querySelectorAll('.chk-row');
+    for (var r = 0; r < rows.length; r++) {
+        var a = rows[r].querySelector('.chk-lnk');
+        var txt = rows[r].querySelector('.chk-txt');
+        if (!a || !txt) continue;
+        var jp = a.getAttribute('data-jp');
+        if (jp) {
+            var el = document.createElement('small');
+            el.className = 'chk-jp';
+            el.textContent = '🗣 ' + jp;
+            txt.appendChild(el);
+        }
+    }
+
+    function load() {
+        try { return JSON.parse(localStorage.getItem(KEY) || '{}'); }
+        catch (e) { return {}; }
+    }
+    function save(state) {
+        try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+    }
+
+    var state = load();
+    var boxes = [].filter.call(
+        document.querySelectorAll('.chk input[type=checkbox]'),
+        function (b) { var row = b.closest('.chk-row'); return !(row && row.classList.contains('skip')); }
+    );
+    var countEl = document.getElementById('chkCount');
+    var fillEl = document.getElementById('chkFill');
+    var resetEl = document.getElementById('chkReset');
+
+    function render() {
+        var done = 0;
+        for (var i = 0; i < boxes.length; i++) if (boxes[i].checked) done++;
+        if (countEl) countEl.textContent = done + ' / ' + boxes.length;
+        if (fillEl) fillEl.style.width = boxes.length ? (done / boxes.length * 100) + '%' : '0';
+    }
+
+    for (var i = 0; i < boxes.length; i++) {
+        (function (box) {
+            var id = box.getAttribute('data-id');
+            if (state[id]) box.checked = true;
+            box.addEventListener('change', function () {
+                state[id] = box.checked;
+                save(state);
+                render();
+            });
+        })(boxes[i]);
+    }
+    render();
+
+    if (resetEl) {
+        resetEl.addEventListener('click', function () {
+            if (!confirm('체크를 전부 지울까요?')) return;
+            state = {};
+            save(state);
+            for (var i = 0; i < boxes.length; i++) boxes[i].checked = false;
+            render();
+        });
+    }
+
+    var btn = document.getElementById('toTop');
+    if (btn) {
+        var toggle = function () {
+            if (window.scrollY > 400) btn.classList.add('on');
+            else btn.classList.remove('on');
+        };
+        window.addEventListener('scroll', toggle, { passive: true });
+        toggle();
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+})();
+</script>
+</body>
+</html>
